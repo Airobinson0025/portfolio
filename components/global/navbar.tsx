@@ -8,7 +8,8 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 type Props = {}
 
-const Navbar = (props: Props) => {
+const Navbar: React.FC = () => {
+    
   return (
     <header className='fixed p-3 w-full flex items-center justify-between bg-neutral-200/.5 backdrop-blur-md border-b border-neutral-300 dark:border-neutral-800 z-[1000]'>
         <aside className='flex items-center gap-3 md:gap-4'>

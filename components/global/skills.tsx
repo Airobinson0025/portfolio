@@ -1,8 +1,9 @@
 import React from 'react'
 import { IconType } from 'react-icons'
-import  { FaCode, FaReact } from 'react-icons/fa'
+import  { FaReact } from 'react-icons/fa'
 import SkillsCard from '../cards/skills-card'
 import { SiPostgresql } from 'react-icons/si'
+import { FaCode } from 'react-icons/fa6'
 
 interface Skill {
     title: string
@@ -21,7 +22,7 @@ const Skills: React.FC = () => {
         },
         {
             title: 'Frontend Development',
-            description: 'I develop the frontend of my apps using React.js. Im profiecient utilizing react hooks and fetching data from APIs.',
+            description: 'I develope the frontend of my apps using React.js. Im profiecient utilizing react hooks and fetching data from APIs.',
             icon: FaReact
 
         },
@@ -35,7 +36,7 @@ const Skills: React.FC = () => {
  
     return (
     <section className='px-8 mt-14'>
-        <h1 className='mb-10'>My skills as a fullstack developer.</h1>
+        <h1 className='mb-14'>My skills as a fullstack developer.</h1>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
         {skillsArray.map((skill) => (
             <SkillsCard key={skill.title} skill={skill} />
