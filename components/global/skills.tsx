@@ -47,7 +47,7 @@ const Skills: React.FC = () => {
     ]
  
     return (
-    <section className='px-4 md:px-8 mt-14'>
+    <section className='px-4 md:px-8 mt-14' id='skills'>
         <h1 className='mb-14 pl-4'>My skills as a fullstack developer</h1>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
         {skillsArray.map((skill, index) => (
