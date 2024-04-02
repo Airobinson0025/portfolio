@@ -65,7 +65,7 @@ const Navbar: React.FC  = () => {
         <nav className='flex items-center gap-5'>
             <ul className='hidden lg:flex items-center gap-8 text-[1.1rem] font-medium'>
                 {navLinks.map((link, index) => (
-                    <li key={index} className='text-muted-foreground transition-colors hover:text-foreground'>
+                    <li key={index} className='text-muted-foreground hover:text-foreground hover:scale-105 transition duration-200'>
                         <Link href={link.href} onClick={() => lenis?.scrollTo(`${link.href}`) } >{link.name}</Link>
                     </li>
                 ))}
