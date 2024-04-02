@@ -6,6 +6,7 @@ import Skills from "@/components/global/skills";
 
 
 
+
 export default function Home() {
   return (
     <main className="">
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Skills />
       <Tools />
+
     </main>
   );
 }
