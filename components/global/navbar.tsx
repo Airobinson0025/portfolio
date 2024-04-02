@@ -5,12 +5,45 @@ import { ModeToggle } from './mode-toggle'
 import { MenuIcon } from 'lucide-react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '../ui/sheet'
+import { useLenis } from '@studio-freight/react-lenis'
 
 
 
-type Props = {}
+type NavLinks = {
+    name: string
+    href: string
+}
 
-const Navbar: React.FC = () => {
+
+
+const Navbar: React.FC  = () => {
+
+    const lenis = useLenis((scroll) => {
+    
+    })
+
+    const navLinks: NavLinks[] = [
+        {
+            name: 'Skills',
+            href: '#skills'
+        },
+        {
+            name: 'Tools',
+            href: '#tools'
+        },
+        {
+            name: 'Work',
+            href: '#work'
+        },
+        {
+            name: 'Blog',
+            href: '#blog'
+        },
+        {
+            name: 'Contact',
+            href: '#contact'
+        }
+    ]
     
   return (
     <header className='fixed p-3 w-full flex items-center justify-between bg-neutral-200/.5 backdrop-blur-md border-b border-neutral-300 dark:border-neutral-800 z-50'>
@@ -31,21 +64,11 @@ const Navbar: React.FC = () => {
 
         <nav className='flex items-center gap-5'>
             <ul className='hidden lg:flex items-center gap-8 text-[1.1rem] font-medium'>
-                <li className='text-muted-foreground transition-colors hover:text-foreground'>
-                    <Link href='#skills'>Skills</Link>
-                </li>
-                <li className='text-muted-foreground transition-colors hover:text-foreground'>
-                    <Link href='#tools'>Tools</Link>
-                </li>
-                <li className='text-muted-foreground transition-colors hover:text-foreground'>
-                    <Link href='/'>Work</Link>
-                </li>
-                <li className='text-muted-foreground transition-colors hover:text-foreground'>
-                    <Link href='/'>Blog</Link>
-                </li>
-                <li className='text-muted-foreground transition-colors hover:text-foreground'>
-                    <Link href='/'>Contact</Link>
-                </li>
+                {navLinks.map((link, index) => (
+                    <li key={index} className='text-muted-foreground transition-colors hover:text-foreground'>
+                        <Link href={link.href} onClick={() => lenis?.scrollTo(`${link.href}`) } >{link.name}</Link>
+                    </li>
+                ))}
             </ul>
             <ModeToggle />
 
@@ -60,21 +83,12 @@ const Navbar: React.FC = () => {
                             <SheetTitle>Aaron Robinson</SheetTitle>
                         </SheetHeader>
                         <ul className='flex flex-col gap-8 text-[1.75rem] font-medium mt-8'>
-                            <SheetClose asChild>
-                                <Link href='#skills'>Skills</Link>
-                            </SheetClose>
-                            <SheetClose asChild>
-                                <Link href='#tools'>Tools</Link>
-                            </SheetClose>
-                            <SheetClose asChild>
-                                <Link href='#skills'>Work</Link>
-                            </SheetClose>
-                            <SheetClose asChild>
-                                <Link href='#skills'>Blog</Link>
-                            </SheetClose>
-                            <SheetClose asChild>
-                                <Link href='#skills'>Contact</Link>
-                            </SheetClose>
+                                {navLinks.map((link, index) => (
+                                        <SheetClose key={index} asChild>
+                                            <Link key={index} href={link.href} onClick={() => lenis?.scrollTo(`${link.href}`) }>{link.name}
+                                            </Link>
+                                        </SheetClose>
+                                ))}
                         </ul>
                     </SheetContent>
                 </Sheet>
