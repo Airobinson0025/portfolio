@@ -13,7 +13,7 @@ const Skills: React.FC = () => {
         {
             title: 'UI/UX Design',
             subtitle: 'Designing Intuitive Experiences',
-            description: 'I love designing experiences that fun and intuitive for users. Experiences that are easy to use and visually appealing.',
+            description: 'I love designing experiences that are fun and intuitive for users. Experiences that are easy to use and visually appealing.',
         
 
         },
