@@ -16,7 +16,7 @@ type SkillsCardProps = {
  const SkillsCard: React.FC<SkillsCardProps>  = ({ skill }) => {
 
    return (
-     <Card className="max-w-4xl shadow-lg hover:bg-primary hover:text-secondary transition duration-300">
+     <Card className="max-w-4xl shadow-xl hover:bg-primary hover:text-secondary transition duration-300">
        <CardHeader>
             <CardTitle className="">{skill.title}</CardTitle>
             <CardDescription>{skill.subtitle}</CardDescription>
