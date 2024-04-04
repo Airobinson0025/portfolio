@@ -77,7 +77,7 @@ const Tools: React.FC = () => {
   return (
     <section className='mt-32 flex flex-col items-center' id='tools'>
         <h1 className='text-center mb-14'>Tools and technology <br/> I build with</h1>
-        <Tabs defaultValue='proficient' className='w-[400px] sm:w-[550px] md:w-[700px] lg:w-[850px] h-[750px] md:h-[600px]'>
+        <Tabs defaultValue='proficient' className='w-[400px] sm:w-[550px] md:w-[700px] lg:w-[800px] h-[750px] md:h-[600px]'>
           <TabsList className='grid w-full grid-cols-2 shadow-xl'>
             <TabsTrigger value='proficient'>Proficient</TabsTrigger>
             <TabsTrigger value='learning'>Learning</TabsTrigger>

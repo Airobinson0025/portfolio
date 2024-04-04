@@ -4,7 +4,7 @@ import React from 'react'
 import { ModeToggle } from './mode-toggle'
 import { MenuIcon } from 'lucide-react'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
-import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '../ui/sheet'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger, SheetClose } from '../ui/sheet'
 import { useLenis } from '@studio-freight/react-lenis'
 
 
