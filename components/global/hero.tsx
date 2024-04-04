@@ -1,10 +1,14 @@
 import React from 'react'
-import { Boxes } from './background-boxes'
 import { cn } from '@/lib/utils'
 import { Button } from '../ui/button'
+import { useToast } from '../ui/use-toast'
+import { ToastAction } from '@radix-ui/react-toast'
+
 
 
 const Hero: React.FC = () => {
+  const { toast } = useToast()
+  
   return (
     <section className=''>
           <div className="h-[700px] relative w-full dark:bg-background bg-background  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] flex flex-col items-start justify-center">
@@ -17,7 +21,14 @@ const Hero: React.FC = () => {
           </h3>
           <h4 className='text-primary z-20 pl-4 md:pl-8'>Transforming ideas into interactive wonders.</h4>
           <a href='/' download className='pl-4 md:pl-8'>
-            <Button className='relative mt-4 hover:scale-105 transition duration-300 text-md z-20 ' size='lg'>Download My Resume</Button>   
+            <Button onClick={() => {
+              toast({
+                title: 'Thanks for downloading my resume!',
+                description: 'I hope you find it helpful.',
+                
+              
+              })
+            }} className='relative mt-4 hover:scale-105 transition duration-300 text-md z-20 ' size='lg'>Download My Resume</Button>   
           </a>
           </div>
       </section>
