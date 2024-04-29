@@ -26,8 +26,8 @@ const Skills: React.FC = () => {
         },
         {
             title: 'Backend Development',
-            subtitle: 'PostgreSQL Database Management',
-            description: 'PostgreSQL is my go to database for my backend development. I use it to store and manage data for my applications.',
+            subtitle: 'MongoDB Database Management',
+            description: 'MongoDB is my go to database for my backend development. I use it to store and manage data for my applications.',
 
         },
         {

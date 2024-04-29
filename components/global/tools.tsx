@@ -3,7 +3,7 @@ import React from 'react'
 import { IconType } from 'react-icons/lib'
 import ToolCard from '../cards/tool-card'
 import { FaHtml5, FaReact } from 'react-icons/fa'
-import { SiDjango, SiJavascript, SiNextdotjs, SiPostgresql, SiPrisma, SiPython, SiTailwindcss, SiTypescript } from 'react-icons/si'
+import { SiDjango, SiJavascript, SiNextdotjs, SiPostgresql, SiMongodb, SiPython, SiTailwindcss, SiTypescript } from 'react-icons/si'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
 
 
@@ -63,8 +63,8 @@ const Tools: React.FC = () => {
       proficiency: 'profiecient'
     },
     {
-      icon: SiPrisma,
-      name: 'Prisma',
+      icon: SiMongodb,
+      name: 'MongoDB',
       proficiency: 'profiecient'
     }
   ]
@@ -82,15 +82,15 @@ const Tools: React.FC = () => {
             <TabsTrigger value='proficient'>Proficient</TabsTrigger>
             <TabsTrigger value='learning'>Learning</TabsTrigger>
           </TabsList>
-          <TabsContent value='proficient' className='mt-8'>
-            <div className='grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12'>
+          <TabsContent value='proficient' className='mt-14'>
+            <div className='grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-10'>
               {proficientTools.map((tool, index) => (
                 <ToolCard key={index} tool={tool} />
               ))}
             </div>
           </TabsContent>
-          <TabsContent value='learning' className='mt-8'>
-            <div className='grid grid-cols-2 md:grid-cols-3 gap-12'>
+          <TabsContent value='learning' className='mt-14'>
+            <div className='grid grid-cols-2 md:grid-cols-3 gap-8  md:gap-10'>
               {learningTools.map((tool, index) => (
                 <ToolCard key={index} tool={tool} />
               ))}
